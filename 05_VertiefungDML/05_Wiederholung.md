@@ -72,7 +72,8 @@ soll abbilden, dass heute 22 Wintermäntel vom Vertreter mit VNR 7777 verkauft w
 
 ### Lösung
 ```sql
-
+insert into  verkauf
+values (1014, 7777, 13, 22, sysdate);
 ```
 
 ## Aufgabe 8
