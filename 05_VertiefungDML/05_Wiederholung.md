@@ -1,4 +1,4 @@
-# Übungen
+# Übung5
 
 Im folgenden Skript werden die Beispiel-Tabellen `VERTRETER`, `VERKAUF` und `ARTIKEL` verwendet.
 
@@ -41,5 +41,6 @@ Bei welchen Artikeln (`NAME` und `ARTIKELNUMMER`) liegt der Preis über `100`?
 
 ### Lösung
 ```sql
-Deine Lösung
+select aname, anr from artikel
+where apreis>100;
 ```
