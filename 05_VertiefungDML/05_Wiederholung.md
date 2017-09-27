@@ -28,7 +28,8 @@ select * from verkauf;
 ```
 
 ## Aufgabe 3
-Zeige alle Vertreter mit `NAME` und `VNR` an, die eine Provision von  weniger als 7% erhalten. 
+Zeige alle Vertreter mit `NAME` und `VNR` an, die eine Provision von  
+weniger als 7% erhalten. 
 
 ### Lösung
 ```sql
@@ -43,4 +44,78 @@ Bei welchen Artikeln (`NAME` und `ARTIKELNUMMER`) liegt der Preis über `100`?
 ```sql
 select aname, anr from artikel
 where apreis>100;
+```
+
+## Aufgabe 5
+Zeige alle Vertreter an, die vor dem 01.01.1980 geboren sind und deren Name 
+ein i beinhaltet.
+
+### Lösung
+```sql
+select * from vertreter
+where geburtsdatum<01.01.1980 and vname like '%a%';
+```
+
+## Aufgabe 6
+Füge dich als Vertreter in die Tabelle Vertreter ein mit einer Provision von 
+6% und der Mitarbeiternummer 7777.
+
+### Lösung
+```sql
+insert into vertreter
+values (7777, 'Bullboss', to_date('01.01.2001', 'dd.mm.yyyy'), 0.06);
+```
+
+## Aufgabe 7
+Füge für deinen Vertreter einen Verkauf mit UNR 1014 hinzu. Der neue Datensatz 
+soll abbilden, dass heute 22 Wintermäntel vom Vertreter mit VNR 7777 verkauft wurden.
+
+### Lösung
+```sql
+
+```
+
+## Aufgabe 8
+Ändere den Preis eines Stiefels auf 88,90.
+
+### Lösung
+```sql
+
+```
+
+## Aufgabe 9
+Füge der Tabelle Vertreter eine Spalte bonus hinzu, in die ein bis zu 
+vierstelliger, ganzzahliger Wert eingetragen werden soll.
+
+### Lösung
+```sql
+
+```
+
+## Aufgabe 10
+Setze den Bonus für alle Vertreter auf 500.
+
+### Lösung
+```sql
+
+```
+
+## Aufgabe 11
+Ändere den Datentyp für die Spalte vname in der Tabelle vertreter auf VARCHAR2(20);
+
+### Lösung
+```sql
+
+```
+
+## Aufgabe 12
+An welchen Tagen wurden Verkäufe getätigt? Erzeuge folgende Ausgabe: 
+DATUM
+----------
+27.06.15
+28.06.15
+
+### Lösung
+```sql
+
 ```
