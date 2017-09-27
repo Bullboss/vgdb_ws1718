@@ -53,7 +53,7 @@ ein i beinhaltet.
 ### Lösung
 ```sql
 select * from vertreter
-where geburtsdatum<01.01.1980 and vname like '%a%';
+where geburtsdatum<to_date('01.01.1980', 'dd.mm.yyyy') and vname like '%i%';
 ```
 
 ## Aufgabe 6
@@ -84,6 +84,7 @@ values (1014, 7777, 13, 22, sysdate);
 update artikel
 set apreis=88.90
 where aname='Stiefel';
+--where anr=12;
 ```
 
 ## Aufgabe 9
@@ -92,7 +93,8 @@ vierstelliger, ganzzahliger Wert eingetragen werden soll.
 
 ### Lösung
 ```sql
-
+alter table vertreter
+add (bonus number(4));
 ```
 
 ## Aufgabe 10
@@ -100,7 +102,8 @@ Setze den Bonus für alle Vertreter auf 500.
 
 ### Lösung
 ```sql
-
+update  vertreter
+set bonus=500;
 ```
 
 ## Aufgabe 11
@@ -108,7 +111,8 @@ Setze den Bonus für alle Vertreter auf 500.
 
 ### Lösung
 ```sql
-
+alter vertreter
+modify (vname varchar2(20));
 ```
 
 ## Aufgabe 12
@@ -120,5 +124,6 @@ DATUM
 
 ### Lösung
 ```sql
-
+select distinct datum
+from verkauf;
 ```
