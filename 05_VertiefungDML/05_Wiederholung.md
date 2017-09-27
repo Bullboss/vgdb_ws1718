@@ -81,7 +81,9 @@ values (1014, 7777, 13, 22, sysdate);
 
 ### Lösung
 ```sql
-
+update artikel
+set apreis=88.90
+where aname='Stiefel';
 ```
 
 ## Aufgabe 9
