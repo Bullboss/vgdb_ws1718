@@ -32,14 +32,11 @@ Zeige alle Vertreter mit `NAME` und `VNR` an, die eine Provision von  weniger al
 
 ### Lösung
 ```sql
-select vname, vnr from vertreter
-where provision<0.07;
+Deine Lösung
 ```
 
-## Aufgabe 4
+##Aufgabe 4
 Bei welchen Artikeln (`NAME` und `ARTIKELNUMMER`) liegt der Preis über `100`?
-
-### Lösung
 ```sql
 Deine Lösung
 ```
